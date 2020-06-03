@@ -1,2 +1,3 @@
-# percentage_calculator
-This is a only percentage calculator
+## Percentage Calculator
+***
+This calculate only percentage by javascript & bootstrap.css is used for theme.

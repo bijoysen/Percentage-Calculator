@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Percentage</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+	
+	<div class="container mt-5">
+		<div class="row justify-content-center">
+			<div class="col-md-4">
+				<h4>Calculate Percentage</h4>
+				<div class="card">
+					<div class="card-body">
+						<div class="form-group">
+							<input type="number" class="form-control" id="total" placeholder="Total Number">
+						</div>
+						<div class="form-group">
+							<input type="number" class="form-control" id="done" placeholder="Number">
+						</div>
+						<div class="row align-items-center">
+							<div class="col-5">
+								<div class="form-group mb-0">
+									<!-- <a href="javascript:void(0)" class="btn btn-primary calcValue">Calculate</a> -->
+									<a href="javascript:void(0)" class="btn btn-primary" onclick="calculateP();">Calculate</a>
+								</div>
+							</div>
+							<div class="col-7 text-right">
+								<p class="mb-0">Percentage: <span id="calculate">0</span>%</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+	<script>
+		// jQuery(document).ready(function($) {
+		// 	$('.calcValue').click(function(event) {
+		// 		/* Act on the event */
+		// 		var total = $('#total').val();
+		// 		var done = $('#done').val();
+				
+		// 		var percentage = (done / total) * 100;
+
+		// 		$('#calculate').html(percentage.toFixed(2));
+		// 	});
+		// });
+
+		function calculateP(){
+			document.getElementById('calculate').innerHTML = 0;
+
+			let totalNumber = document.getElementById('total').value;
+			let doneNumber = document.getElementById('done').value;
+			let calcPercentage;
+			
+			if ( doneNumber > 0 &&  totalNumber > 0 && doneNumber <= totalNumber ) {
+				calcPercentage = (doneNumber / totalNumber ) * 100;
+			} else {
+				alert('Insert proper Value');
+				return false;
+			}
+
+			document.getElementById('calculate').innerHTML = calcPercentage.toFixed(2);
+			// alert(calcPercentage);
+		}
+	</script>
+</body>
+</html>
