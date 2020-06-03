@@ -38,36 +38,5 @@
 	</div>
 
 	<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
-	<script>
-		// jQuery(document).ready(function($) {
-		// 	$('.calcValue').click(function(event) {
-		// 		/* Act on the event */
-		// 		var total = $('#total').val();
-		// 		var done = $('#done').val();
-				
-		// 		var percentage = (done / total) * 100;
-
-		// 		$('#calculate').html(percentage.toFixed(2));
-		// 	});
-		// });
-
-		function calculateP(){
-			document.getElementById('calculate').innerHTML = 0;
-
-			let totalNumber = document.getElementById('total').value;
-			let doneNumber = document.getElementById('done').value;
-			let calcPercentage;
-			
-			if ( doneNumber > 0 &&  totalNumber > 0 && doneNumber <= totalNumber ) {
-				calcPercentage = (doneNumber / totalNumber ) * 100;
-			} else {
-				alert('Insert proper Value');
-				return false;
-			}
-
-			document.getElementById('calculate').innerHTML = calcPercentage.toFixed(2);
-			// alert(calcPercentage);
-		}
-	</script>
 </body>
 </html>
